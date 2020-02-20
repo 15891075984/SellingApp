@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-02-19 15:06:38
+ * @LastEditTime: 2020-02-20 22:53:19
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \App\build\webpack.dev.conf.js
+ */
 'use strict'
 const utils = require('./utils')
 const webpack = require('webpack')
@@ -23,6 +31,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // these devServer options should be customized in /config/index.js
   devServer: {
     clientLogLevel: 'warning',
+    disableHostCheck: true,
     historyApiFallback: {
       rewrites: [
         { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
