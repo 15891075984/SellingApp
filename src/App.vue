@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-19 15:06:38
- * @LastEditTime: 2020-02-20 21:59:53
+ * @LastEditTime: 2020-02-23 21:30:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\App.vue
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import Button from 'vant/lib/button';
 import 'vant/lib/button/style';
 export default {
   name: 'App',
@@ -31,12 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="less" scoped>
-.App{
-  color:red;
-  span{
-    font-size: 30px;
-  }
-}
-</style>

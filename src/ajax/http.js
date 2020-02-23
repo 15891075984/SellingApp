@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-02-19 16:31:13
- * @LastEditTime: 2020-02-19 19:56:26
+ * @LastEditTime: 2020-02-23 18:37:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\ajax\axios.js
@@ -12,13 +12,14 @@ import {Toast} from 'vant'
 // let Toast
 axios.interceptors.request.use((config) => {
     // 请求接口地址  可根据 process.env.NODE_ENV 更改
+    console.log(process.env.NODE_ENV)
     //全局引入loading
     Toast.loading({
         message: '加载中...',
         forbidClick: true,
         duration:500000
     });
-    config.baseURL = 'http://localhost:3100/'
+    config.baseURL = 'http://119.23.10.99:3100/'
     return config
 },err => {
     console.log(11111, err)

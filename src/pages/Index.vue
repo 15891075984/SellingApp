@@ -1,15 +1,15 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-19 16:07:40
- * @LastEditTime: 2020-02-20 22:37:14
+ * @LastEditTime: 2020-02-23 21:44:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\page\Index.vue
  -->
 
- <template>
-   <div class="main">
-     <van-search
+<template>
+  <div class="main">
+    <!-- <van-search
       v-model="searchValue"
       shape="round"
       background="#FFDA44"
@@ -23,13 +23,24 @@
           <img :src="item.url" style="width:100%;height:150px" @click="handleClickImg(item)">
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
-    </swiper>
-   </div>
- </template>
- 
- <script>
- export default {
+    </swiper> -->
+    <Search/>
+    <IndexNav></IndexNav>
+    <NavBottom ></NavBottom>
+  </div>
+</template>
+
+<script>
+import NavBottom from '../components/NavBottom'
+import IndexNav from '../components/IndexNav.vue'
+import Search from '../components/Search'
+export default {
   name: 'Index',
+  components:{
+    NavBottom,
+    IndexNav,
+    Search
+  },
   created () {
     this.ajax.get('/').then(res => {
       this.swiperData = res.data

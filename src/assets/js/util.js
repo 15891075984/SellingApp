@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-02-20 21:50:30
- * @LastEditTime: 2020-02-20 21:56:00
- * @LastEditors: your name
+ * @LastEditTime: 2020-02-23 21:12:56
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\assets\js\util.js
  */
@@ -20,9 +20,6 @@ function result(s, l) {
 export default {
 	comBack () {
 		router.go(-1)
-	},
-	toast () {
-		Toast('程序员姐姐还没来得及做这个功能呢！')
 	},
 	formatDate: {
 		format: function(date, pattern) {
