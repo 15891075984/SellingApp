@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-19 16:07:40
- * @LastEditTime: 2020-02-23 21:43:56
+ * @LastEditTime: 2020-03-07 18:43:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\page\Index.vue
@@ -37,7 +37,7 @@ export default {
     IndexNav
   },
   created () {
-    this.ajax.get('/').then(res => {
+    this.ajax.get('/good').then(res => {
       this.swiperData = res.data
       console.log(res.data)
     })

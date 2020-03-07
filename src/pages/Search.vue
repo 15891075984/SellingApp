@@ -40,7 +40,7 @@ export default {
 	methods: {
 		//查询商品
 		handleSearch () {
-			this.ajax.get('/').then(res => {
+			this.ajax.get('/good').then(res => {
 				this.items = res.data.concat(res.data)
 			})
 		},

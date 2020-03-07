@@ -32,8 +32,8 @@ import {Toast,MessageBox} from 'mint-ui'
 export default {
 	data () {
 		return {
-			username: '',
-			password: '',
+			username: 'admin',
+			password: 'admin',
 			url: './static/avatar.jpg'
 		}
 	},
@@ -68,33 +68,35 @@ export default {
 		},
 		gologin () {
 			if(this.username ==''){
-					Toast('请输入账户名')
-				}else if(this.password == ''){
-					Toast('请输入密码');
-				}else if(this.password.length <= 6){
-					Toast('密码不能低于6位哟')
-				}else{
-					window.localStorage.setItem('username',this.username)
-					window.localStorage.setItem('password',this.password)
-					this.$store.dispatch('hasLogin')
-					// let username = window.localStorage.getItem('username')
-					let obj = {}
-					obj.avatar = this.url
-					obj.username = this.username
-					obj.password = this.password
-					this.$store.dispatch('setUsername', this.username)
-					this.$store.dispatch('setUserinfo', obj)
-					Toast({
-					  message: '登录成功',
-					  duration: 500
-					});
-					setTimeout(()=>{
-						this.$router.push({
-	                        path: '/'
-	                    })
-					},600)
-                    this.$store.dispatch('setCurindex', 0)
+				Toast('请输入账户名')
+			}else if(this.password == ''){
+				Toast('请输入密码');
+			}else{
+				let params = {
+					username: this.username,
+					password: this.password
 				}
+				// window.localStorage.setItem('username',this.username)
+				// window.localStorage.setItem('password',this.password)
+				this.$store.dispatch('hasLogin', params)
+				// let username = window.localStorage.getItem('username')
+				// let obj = {}
+				// obj.avatar = this.url
+				// obj.username = this.username
+				// obj.password = this.password
+				// this.$store.dispatch('setUsername', this.username)
+				// this.$store.dispatch('setUserinfo', obj)
+				// Toast({
+				// 	message: '登录成功',
+				// 	duration: 500
+				// });
+				// setTimeout(()=>{
+				// 	this.$router.push({
+				// 		path: '/'
+				// 	})
+				// },600)
+				// this.$store.dispatch('setCurindex', 0)
+			}
 		}
 	}
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-02-19 15:06:38
- * @LastEditTime: 2020-02-23 21:14:35
+ * @LastEditTime: 2020-02-23 23:02:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\router\index.js
@@ -39,7 +39,7 @@ export default new Router({
     },{
       path:'/404',
       name:'404',
-      component: () => import('@/pages/NotFound')
+      component: () => import('@/pages/notFound')
     },{
       path:'/fishpond',
       name:'fishpond',

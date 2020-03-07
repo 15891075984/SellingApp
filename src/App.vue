@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-02-19 15:06:38
- * @LastEditTime: 2020-02-23 21:30:24
+ * @LastEditTime: 2020-03-07 19:13:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\App.vue
@@ -17,10 +17,10 @@ import 'vant/lib/button/style';
 export default {
   name: 'App',
   created () {
-    this.ajax.get('/').then(res => {
-      this.swiperData = res.data
-      console.log(res.data)
-    })
+    // this.ajax.get('/good').then(res => {
+    //   this.swiperData = res.data
+    //   console.log(res.data)
+    // })
   },
   data() {
       return {

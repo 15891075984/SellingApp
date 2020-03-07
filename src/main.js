@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-02-19 15:06:38
- * @LastEditTime: 2020-02-23 21:10:58
+ * @LastEditTime: 2020-03-07 19:12:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\main.js
@@ -12,7 +12,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import {Button,Search,Toast,Tabbar,TabbarItem } from 'vant'
-import ajax from './ajax/http'
+//import ajax from './ajax/http'
 import store from './store/index'
 import mint from './library/mint'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -27,7 +27,7 @@ Vue.use(VueAwesomeSwiper)
 
 Vue.prototype.util = UtilJS
 
-Vue.prototype.ajax = ajax
+// Vue.prototype.ajax = ajax
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

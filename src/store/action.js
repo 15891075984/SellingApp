@@ -1,3 +1,7 @@
+//import axios from '../ajax/http'
+import axios from '../ajax/axios'
+//import axios from 'axios'
+//import axios from 'axios'
 export default {
 	setShow: ({commit}, bool) => {
 		commit('setShow', bool)
@@ -11,12 +15,26 @@ export default {
 	hideNav: ({ commit }) => {
 		commit('hideNav')
 	},
-	hasLogin: ({ commit }) => {
-		if(window.localStorage.getItem('username') != null && window.localStorage.getItem('password') != null) {
+	hasLogin: ({ commit },params) => {
+		console.log(params)
+		// if(window.localStorage.getItem('username') != null && window.localStorage.getItem('password') != null) {
+		// 	commit('hasLogin')
+		// }else {
+		// 	console.log('没有登录')
+		// }
+		// post('/second-hand/login', params).then(res => {
+		// 	console.log(6666,res)
+		// })
+		//instance.post('/second-hand/login',params)
+		axios({
+			url: '/second-hand/login',
+			method: 'post',
+			data: {...params},
+			headers: {'Content-Type': 'application/json'}
+		}).then( res => {
+			window.localStorage["token"] = JSON.stringify(res.data.returnObject);
 			commit('hasLogin')
-		}else {
-			console.log('没有登录')
-		}	
+		})
 	},
 	noLogin: ({ commit }) => {
 		if(window.localStorage.getItem('username') == null && window.localStorage.getItem('password') == null){
