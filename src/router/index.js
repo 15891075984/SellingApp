@@ -1,14 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2020-02-19 15:06:38
- * @LastEditTime: 2020-02-23 23:02:44
+ * @LastEditTime: 2020-03-07 22:36:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \App\src\router\index.js
  */
 import Vue from 'vue'
 import Router from 'vue-router'
-
+alert(334)
 // import Index from '@/pages/Index'
 // import Category from '@/pages/Category'
 // import Search from '@/pages/Search'
